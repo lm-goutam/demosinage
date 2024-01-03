@@ -1,0 +1,26 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url "https://maven.appspector.com/artifactory/android-sdk"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "LemmaSignageClient"
+include ':app'
+dependencyResolutionManagement
+include ':LemmaSignageSDK'
+project(':LemmaSignageSDK').projectDir = new File(settingsDir, '../LemmaSignageClient/LemmaSignageSDK')
+include ':builddex'
+include ':LemmaSignageWSDK'
+include ':developerapp'
+include ':SDKInstantiator'
+
+//include ':app'
+//project(':app').projectDir = new File(settingsDir, '../LemmaSignageClient/app')

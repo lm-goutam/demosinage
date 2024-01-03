@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lemma.lemmasignageclient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:name="com.lemma.lemmasignageclient.common.LSCApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LemmaSignageClient"
+        android:networkSecurityConfig="@xml/network_sec_conf">
+
+        <receiver
+            android:name="com.lemma.lemmasignageclient.addon.RebootReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.lemma.lemmasignageclient.ui.SettingsActivity"
+            android:enabled="true"
+            android:label="Settings"
+            android:taskAffinity="com.package.task_for_inventory_activity"
+            android:theme="@style/Theme.LemmaSignageClient.NoActionBar"
+            android:exported="true"
+            android:launchMode="singleTop"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <!-- Android TV launcher intent -->
+<!--                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>-->
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lemma.lemmasignageclient.ui.shedule.SchedulePlayerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:taskAffinity="com.package.task_for_SchedulePlayerActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"></activity>
+
+        <activity
+            android:name="com.lemma.lemmasignageclient.ui.test.TestActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:taskAffinity="com.package.task_for_SchedulePlayerActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"></activity>
+
+        <activity
+            android:name="com.lemma.lemmasignageclient.ui.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LemmaSignageClient.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    <!--      live player activities  -->
+        <activity
+            android:name=".ui.live.Activity.AdTagCreationAct"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:taskAffinity="com.package.task_for_SchedulePlayerActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"></activity>
+
+        <activity
+            android:name=".ui.live.Activity.HomeScreen"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:taskAffinity="com.package.task_for_SchedulePlayerActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"></activity>
+        <activity
+            android:name=".ui.live.Activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:taskAffinity="com.package.task_for_SchedulePlayerActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"></activity>
+
+    </application>
+
+</manifest>

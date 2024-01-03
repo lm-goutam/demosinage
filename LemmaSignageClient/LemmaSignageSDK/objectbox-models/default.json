@@ -1,0 +1,67 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1441138678285071134",
+      "lastPropertyId": "8:621648594451238126",
+      "name": "CacheEntry",
+      "properties": [
+        {
+          "id": "1:2763068130512690477",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2351285720693156678",
+          "name": "urlString",
+          "type": 9
+        },
+        {
+          "id": "3:2856587992407418062",
+          "name": "localUriString",
+          "type": 9
+        },
+        {
+          "id": "4:8634452148007386801",
+          "name": "urlCRC32Hash",
+          "type": 9
+        },
+        {
+          "id": "5:8761777243173358773",
+          "name": "fileName",
+          "type": 9
+        },
+        {
+          "id": "6:129624341171834934",
+          "name": "lastAccessed",
+          "type": 10
+        },
+        {
+          "id": "7:4678604078549833817",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "8:621648594451238126",
+          "name": "inEditMode",
+          "type": 1
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:1441138678285071134",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="3.0">
+    <Ad sequence="1">
+        <InLine>
+            <AdSystem>Lemma Ad Serving</AdSystem>
+            <Impression><![CDATA[]]></Impression>
+            <Creatives>
+                <Creative id="0">
+                    <Linear>
+                        <Duration>00:00:15</Duration>
+                        <TrackingEvents></TrackingEvents>
+                        <VideoClicks>
+                            <ClickTracking>
+                                <![CDATA[http://136.243.4.77/lemma/clicktracker?ts=20160115122206&pid=13&sid=0&aid=7&at=3&gid=0&advid=8&cid=24&impr=35dad65b-bb7a-11e5-ba66-448a5bd44a34]]></ClickTracking>
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile
+                                bitrate="100"
+                                delivery="progressive"
+                                height="480"
+                                id="135"
+                                maxBitrate="100"
+                                minBitrate="100"
+                                type="video/mp4"
+                                width="640"><![CDATA[/sdcard/LemmaApp/Pub/1.mp4]]></MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>
